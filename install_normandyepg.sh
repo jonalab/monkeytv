@@ -62,6 +62,7 @@ cp -r /app/NormandyEPG/tmp/datadocker/. /config/
 cp -r /app/NormandyEPG/tmp/Normandy_EPG.ver /app/NormandyEPG
 rm -rf /app/NormandyEPG/tmp
 rm -rf /tmp/Normandy_EPG.zip
+svn checkout https://github.com/Fleckyvm/MNK/trunk /app/MNK
 #reboot
 else
 echo "no entro"
