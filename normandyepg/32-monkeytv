@@ -2,7 +2,7 @@
 
 # Comprobamos existe Normandy_EPG.ver
 [[ ! -e /app/NormandyEPG/Normandy_EPG.ver ]] && \
-	(wget -P /app/ https://raw.githubusercontent.com/jonalab/monkeytv/master/checknormandyver && cd /app/ && sh checknormandyver)
+	(wget -P /app/ https://raw.githubusercontent.com/jonalab/monkeytv/normandyepg/master/checknormandyver && cd /app/ && sh checknormandyver)
  # Comprobamos si estan los archivos configuracion Oscam
 [[ ! -e /config/oscam/oscam.user ]] && \
         (cp /app/monkeyfiles/oscam.* /config/oscam/)
