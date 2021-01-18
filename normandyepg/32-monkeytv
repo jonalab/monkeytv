@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+
+# Comprobamos existe Normandy_EPG.ver
+[[ ! -e /app/NormandyEPG/Normandy_EPG.ver ]] && \
+	(wget -P /app/ https://raw.githubusercontent.com/jonalab/monkeytv/master/checknormandyver && cd /app/ && sh checknormandyver)
+ # Comprobamos si estan los archivos configuracion Oscam
+[[ ! -e /config/oscam/oscam.user ]] && \
+        (cp /app/monkeyfiles/oscam.* /config/oscam/)
+ # Comprobamos si existe los archivos configuracion Caclient
+[[ ! -e /config/caclient/0c84089713e3668e1cbba92f486b68c0 ]] && \
+        (mkdir -p /config/caclient/ && cp /app/monkeyfiles/0c84089713e3668e1cbba92f486b68c0 /config/caclient/)
